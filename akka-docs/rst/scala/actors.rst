@@ -441,6 +441,8 @@ message. This gives the best concurrency and scalability characteristics.
 
   actor ! "hello"
 
+.. _actors-tell-sender-scala:
+
 If invoked from within an Actor, then the sending actor reference will be
 implicitly passed along with the message and available to the receiving Actor
 in its ``sender: ActorRef`` member field. The target actor can use this
@@ -626,6 +628,8 @@ enables cleaning up of resources:
   actor and create its replacement in response to the :class:`Terminated`
   message which will eventually arrive.
 
+.. _poison-pill-scala:
+
 PoisonPill
 ----------
 
@@ -756,6 +760,7 @@ actor's state which have the same property. The :class:`Stash` trait’s
 implementation of :meth:`preRestart` will call ``unstashAll()``, which is
 usually the desired behavior.
 
+.. _killing-actors-scala:
 
 Killing an Actor
 ================
